@@ -10,7 +10,6 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <script async src="https://cdn.tailwindcss.com"></script>
       <body>
         <MainContainer />
         <Menu />
