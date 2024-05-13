@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-pale: #929292;
+
+  --bg-dark: #000000;
+  --bg-pale: #121212;
+
+  --padding-inline: 20px;
+}
+
+* {
+  /* transition: position 1000ms; */
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, SF Pro Text, SF UI Text, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--color-white);
+  padding-inline: var(--padding-inline);
+  padding-bottom: 100px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  color: var(--color-pale);
+  line-height: 1.6;
+}
+
+b {
+  color: white;
+  display: block;
+  font-weight: bold;
+  margin-block: 10px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --padding-inline: 100px;
+  }
+}
