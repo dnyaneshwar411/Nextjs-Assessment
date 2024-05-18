@@ -36,10 +36,10 @@ export default function Card({ card }) {
     <div
       ref={cardContainer}
       onClick={toggleCard}
-      className={`transition-all origin-center duration-1000 relative overflow-y-auto ${selected ? " h-screen w-screen z-30 md:w-[768px] md:h-[90vh]" : "h-full"} w-full rounded-b-md`}
+      className={`transition-all origin-center  duration-[5 00ms] relative overflow-y-auto ${selected ? " h-screen w-screen z-30 md:w-[768px] md:h-[90vh]" : "h-full"} w-full rounded-b-md`}
     >
       <CardDisplay card={card} selected={selected} />
-      <div className={`w-full bg-[#1c1c1d] rounded-b-md transition-all origin-center duration-1000 overflow-hidden ${selected ? "px-8 pt-4 pb-8 h-auto" : "h-0 p-0 "}`} dangerouslySetInnerHTML={{ __html: card.description }}></div>
+      <div className={`w-full bg-[#1c1c1d] rounded-b-md transition-all origin-center duration-[50 0ms] overflow-hidden ${selected ? "px-8 pt-4 pb-8 h-auto" : "h-0 p-0 "}`} dangerouslySetInnerHTML={{ __html: card.description }}></div>
     </div>
   </div >
 }
