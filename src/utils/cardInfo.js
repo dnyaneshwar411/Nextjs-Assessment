@@ -54,7 +54,7 @@ export const yesterday = [
     }
   },
   {
-    id: 2,
+    id: 3,
     img: "https://s.uiinitiative.com/demo/appstore-f7-react/apps-images/instagram-5.jpg",
     description,
     title1: "GAME OF THE DAY",
