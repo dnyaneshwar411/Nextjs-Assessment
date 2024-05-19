@@ -33,7 +33,7 @@ export default function Card({ card }) {
 
 
   return <>
-    <div className={`fixed left-0 top-0 ${selected ? "h-screen w-screen backdrop-blur-lg z-30" : "backdrop-blur-none z-[-1]"}`}></div>
+    {/* <div className={`fixed left-0 top-0 ${selected ? "h-screen w-screen backdrop-blur-lg z-30" : "backdrop-blur-none z-[-1]"}`}></div> */}
     <div
       ref={cardContainer}
       onClick={toggleCard}
