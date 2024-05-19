@@ -19,7 +19,7 @@ export default function Card({ card }) {
 
     if (!selected) {
       const xcord = `calc(${(doc.width / 2) - (rect.left)}px - 50%)`;
-      const ycord = `calc(${(window.innerHeight / 2) - (rect.top)}px - 50vh)`;
+      const ycord = `calc(${(window.innerHeight / 2) - (rect.top)}px - 50%)`;
       cardContainer.current.style.transform = `translate(${xcord}, ${ycord})`;
     } else {
       cardContainer.current.style.transform = "translate(0px)"
@@ -31,15 +31,16 @@ export default function Card({ card }) {
   }, [selected]);
 
 
-  return <div className={`!aspect-square md:max-h-[50vh] ${selected ? "relative md:py-[5vh] z-20" : "relative"}`}>
-    <div className={`fixed ${selected ? "inset-0 backdrop-blur-xl" : ""}`}></div>
-    <div
-      ref={cardContainer}
-      onClick={toggleCard}
-      className={`transition-all origin-center  duration-[5 00ms] relative overflow-y-auto ${selected ? " h-screen w-screen z-30 md:w-[768px] md:h-[90vh]" : "h-full"} w-full rounded-b-md`}
-    >
+  return <div
+    ref={cardContainer}
+    onClick={toggleCard}
+    className={`w-full transition-all duration-[400ms] linear ${selected ? "h-[100vh] md:h-[90vh] w-screen md:w-[768px] relative border-2 z-20 overflow-auto" : "relative overflow-hidden"} h-96 rounded-2xl border-2 `}
+  >
+
+    <div className={`${selected ? "h-screen" : "h-0"}`}>
       <CardDisplay card={card} selected={selected} />
-      <div className={`w-full bg-[#1c1c1d] rounded-b-md transition-all origin-center duration-[50 0ms] overflow-hidden ${selected ? "px-8 pt-4 pb-8 h-auto" : "h-0 p-0 "}`} dangerouslySetInnerHTML={{ __html: card.description }}></div>
+      <div className="p-0 bg-[#1c1c1d]" dangerouslySetInnerHTML={{ __html: card.description }}></div>
     </div>
+
   </div >
 }

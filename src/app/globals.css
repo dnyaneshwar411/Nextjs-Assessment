@@ -20,6 +20,8 @@
 
 * {
   transition: position 1000ms;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -50,13 +52,14 @@ h2 {
 p {
   color: var(--color-pale);
   line-height: 1.6;
+  margin: 0;
 }
 
 b {
   color: white;
   display: block;
   font-weight: bold;
-  margin-block: 10px;
+  padding-block: 10px;
 }
 
 .card-container {
